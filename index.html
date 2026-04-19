@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>KyyHanforu - Official Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-flex">
+            <div class="logo-area">
+                <i class="fas fa-crown"></i>
+                <span class="logo-text">Kyy<span class="highlight">Hanforu</span></span>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#" class="nav-link active" data-section="home">Beranda</a></li>
+                    <li><a href="#" class="nav-link" data-section="products">Produk</a></li>
+                    <li><a href="#" class="nav-link" data-section="about">Tentang</a></li>
+                    <li><a href="#" class="nav-link" data-section="contact">Kontak</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count" class="cart-badge">0</span>
+            </div>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main id="app">
+        <!-- Home Section -->
+        <section id="home-section" class="page-section active-section">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1>Eksklusivitas Tanpa Batas</h1>
+                    <p>Koleksi premium dari KyyHanforu – gaya yang berbicara untuk dunia.</p>
+                    <button class="btn-primary cta-shop">Belanja Sekarang <i class="fas fa-arrow-right"></i></button>
+                </div>
+                <div class="hero-image">
+                    <i class="fas fa-tshirt fa-8x"></i>
+                </div>
+            </div>
+            <div class="features container">
+                <div class="feature-card">
+                    <i class="fas fa-shipping-fast"></i>
+                    <h3>Pengiriman Cepat</h3>
+                    <p>2-3 hari sampai ke seluruh Indonesia</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Garansi Original</h3>
+                    <p>100% produk asli KyyHanforu</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-undo-alt"></i>
+                    <h3>Retur 14 Hari</h3>
+                    <p>Garansi kepuasan pelanggan</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products-section" class="page-section">
+            <div class="container">
+                <h2 class="section-title">Koleksi Terbaru</h2>
+                <div class="filter-bar">
+                    <button class="filter-btn active" data-cat="all">Semua</button>
+                    <button class="filter-btn" data-cat="apparel">Apparel</button>
+                    <button class="filter-btn" data-cat="accessories">Aksesoris</button>
+                    <button class="filter-btn" data-cat="footwear">Footwear</button>
+                </div>
+                <div id="products-grid" class="products-grid"></div>
+                <div id="loading-spinner" class="spinner hidden"><i class="fas fa-spinner fa-pulse"></i> Memuat...</div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about-section" class="page-section">
+            <div class="container about-container">
+                <div class="about-text">
+                    <h2>Tentang KyyHanforu</h2>
+                    <p>KyyHanforu lahir dari hasrat untuk menciptakan fesyen yang tidak hanya indah dipandang, tetapi juga nyaman dan berkarakter. Setiap jahitan, setiap bahan dipilih dengan cermat untuk memberikan pengalaman tak terlupakan.</p>
+                    <p>Kami percaya bahwa pakaian adalah bentuk ekspresi diri. Sejak 2020, KyyHanforu telah menjadi pilihan utama bagi mereka yang menginginkan perpaduan antara tren modern dan sentuhan klasik.</p>
+                    <div class="stats">
+                        <div><span>5000+</span><br>Pelanggan Puas</div>
+                        <div><span>50+</span><br>Desain Eksklusif</div>
+                        <div><span>24/7</span><br>Layanan Pelanggan</div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <i class="fas fa-store fa-7x"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact-section" class="page-section">
+            <div class="container contact-wrapper">
+                <div class="contact-info">
+                    <h2>Hubungi Kami</h2>
+                    <p><i class="fas fa-map-marker-alt"></i> Jakarta, Indonesia</p>
+                    <p><i class="fas fa-phone-alt"></i> +62 812 3456 7890</p>
+                    <p><i class="fas fa-envelope"></i> support@kyyhanforu.com</p>
+                    <div class="socials">
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-facebook"></i>
+                    </div>
+                </div>
+                <form id="contact-form" class="contact-form">
+                    <input type="text" placeholder="Nama Anda" required>
+                    <input type="email" placeholder="Email" required>
+                    <textarea placeholder="Pesan..." rows="4"></textarea>
+                    <button type="submit" class="btn-primary">Kirim Pesan</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Sidebar -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Keranjang Belanja</h3>
+            <i id="close-cart" class="fas fa-times"></i>
+        </div>
+        <div id="cart-items" class="cart-items"></div>
+        <div class="cart-footer">
+            <div class="cart-total">Total: <span id="cart-total-price">Rp0</span></div>
+            <button id="checkout-btn" class="btn-primary">Checkout</button>
+        </div>
+    </div>
+    <div id="overlay" class="overlay hidden"></div>
+
+    <script src="data.js"></script>
+    <script src="cart.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
